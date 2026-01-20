@@ -1,0 +1,221 @@
+[gd_scene load_steps=8 format=3 uid="uid://btybhvtsl7n88"]
+
+[ext_resource type="Script" path="res://Scripts/PlayerControls.gd" id="1_jcnew"]
+[ext_resource type="Texture2D" uid="uid://setoggso1dnh" path="res://Textures/8x8_checkered_board_.svg" id="1_yxyn5"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_od5an"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_gfrdh"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_yh1xe"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l8tqr"]
+albedo_texture = ExtResource("1_yxyn5")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_6jrbi"]
+
+[node name="Root" type="Node3D"]
+
+[node name="BlackPieces" type="Node" parent="."]
+
+[node name="BlackRookR" type="MeshInstance3D" parent="BlackPieces"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.5, 1, -17.5)
+material_override = SubResource("StandardMaterial3D_od5an")
+mesh = SubResource("CapsuleMesh_gfrdh")
+
+[node name="BlackKnightR" type="MeshInstance3D" parent="BlackPieces"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.5, 1, -12.5)
+material_override = SubResource("StandardMaterial3D_od5an")
+mesh = SubResource("CapsuleMesh_gfrdh")
+
+[node name="BlackBishopR" type="MeshInstance3D" parent="BlackPieces"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.5, 1, -7.5)
+material_override = SubResource("StandardMaterial3D_od5an")
+mesh = SubResource("CapsuleMesh_gfrdh")
+
+[node name="WhiteKing" type="MeshInstance3D" parent="BlackPieces"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.5, 1, -2.5)
+material_override = SubResource("StandardMaterial3D_od5an")
+mesh = SubResource("CapsuleMesh_gfrdh")
+
+[node name="WhiteQueen" type="MeshInstance3D" parent="BlackPieces"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.5, 1, 2.5)
+material_override = SubResource("StandardMaterial3D_od5an")
+mesh = SubResource("CapsuleMesh_gfrdh")
+
+[node name="BlackBishopL" type="MeshInstance3D" parent="BlackPieces"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.5, 1, 7.5)
+material_override = SubResource("StandardMaterial3D_od5an")
+mesh = SubResource("CapsuleMesh_gfrdh")
+skeleton = NodePath("../WhiteKing")
+
+[node name="BlackKnightL" type="MeshInstance3D" parent="BlackPieces"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.5, 1, 12.5)
+material_override = SubResource("StandardMaterial3D_od5an")
+mesh = SubResource("CapsuleMesh_gfrdh")
+
+[node name="BlackRookL" type="MeshInstance3D" parent="BlackPieces"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.5, 1, 17.5)
+material_override = SubResource("StandardMaterial3D_od5an")
+mesh = SubResource("CapsuleMesh_gfrdh")
+
+[node name="BlackPawn1" type="MeshInstance3D" parent="BlackPieces"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5, 1, -17.5)
+material_override = SubResource("StandardMaterial3D_od5an")
+mesh = SubResource("CapsuleMesh_gfrdh")
+skeleton = NodePath("../..")
+
+[node name="BlackPawn2" type="MeshInstance3D" parent="BlackPieces"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5, 1, -12.5)
+material_override = SubResource("StandardMaterial3D_od5an")
+mesh = SubResource("CapsuleMesh_gfrdh")
+skeleton = NodePath("../..")
+
+[node name="BlackPawn3" type="MeshInstance3D" parent="BlackPieces"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5, 1, -7.5)
+material_override = SubResource("StandardMaterial3D_od5an")
+mesh = SubResource("CapsuleMesh_gfrdh")
+skeleton = NodePath("../..")
+
+[node name="BlackPawn4" type="MeshInstance3D" parent="BlackPieces"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5, 1, -2.5)
+material_override = SubResource("StandardMaterial3D_od5an")
+mesh = SubResource("CapsuleMesh_gfrdh")
+skeleton = NodePath("../..")
+
+[node name="BlackPawn5" type="MeshInstance3D" parent="BlackPieces"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5, 1, 2.5)
+material_override = SubResource("StandardMaterial3D_od5an")
+mesh = SubResource("CapsuleMesh_gfrdh")
+
+[node name="BlackPawn6" type="MeshInstance3D" parent="BlackPieces"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5, 1, 7.5)
+material_override = SubResource("StandardMaterial3D_od5an")
+mesh = SubResource("CapsuleMesh_gfrdh")
+skeleton = NodePath("../WhiteKing")
+
+[node name="BlackPawn7" type="MeshInstance3D" parent="BlackPieces"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5, 1, 12.5)
+material_override = SubResource("StandardMaterial3D_od5an")
+mesh = SubResource("CapsuleMesh_gfrdh")
+skeleton = NodePath("../..")
+
+[node name="BlackPawn8" type="MeshInstance3D" parent="BlackPieces"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5, 1, 17.5)
+material_override = SubResource("StandardMaterial3D_od5an")
+mesh = SubResource("CapsuleMesh_gfrdh")
+skeleton = NodePath("../..")
+
+[node name="WhitePieces" type="Node" parent="."]
+
+[node name="WhiteRookL" type="MeshInstance3D" parent="WhitePieces"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.5, 1, -17.5)
+material_override = SubResource("StandardMaterial3D_od5an")
+mesh = SubResource("CapsuleMesh_gfrdh")
+skeleton = NodePath("../..")
+
+[node name="WhiteKnightL" type="MeshInstance3D" parent="WhitePieces"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.5, 1, -12.5)
+material_override = SubResource("StandardMaterial3D_od5an")
+mesh = SubResource("CapsuleMesh_gfrdh")
+skeleton = NodePath("../..")
+
+[node name="WhiteBishopL" type="MeshInstance3D" parent="WhitePieces"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.5, 1, -7.5)
+material_override = SubResource("StandardMaterial3D_od5an")
+mesh = SubResource("CapsuleMesh_gfrdh")
+skeleton = NodePath("../..")
+
+[node name="WhiteQueen" type="MeshInstance3D" parent="WhitePieces"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.5, 1, -2.5)
+material_override = SubResource("StandardMaterial3D_od5an")
+mesh = SubResource("CapsuleMesh_gfrdh")
+skeleton = NodePath("../..")
+
+[node name="WhiteKing" type="MeshInstance3D" parent="WhitePieces"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.5, 1, 2.5)
+material_override = SubResource("StandardMaterial3D_od5an")
+mesh = SubResource("CapsuleMesh_gfrdh")
+
+[node name="WhiteBishopR" type="MeshInstance3D" parent="WhitePieces"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.5, 1, 7.5)
+material_override = SubResource("StandardMaterial3D_od5an")
+mesh = SubResource("CapsuleMesh_gfrdh")
+skeleton = NodePath("../WhiteKing")
+
+[node name="WhiteKnightR" type="MeshInstance3D" parent="WhitePieces"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.5, 1, 12.5)
+material_override = SubResource("StandardMaterial3D_od5an")
+mesh = SubResource("CapsuleMesh_gfrdh")
+skeleton = NodePath("../..")
+
+[node name="WhiteRookR" type="MeshInstance3D" parent="WhitePieces"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.5, 1, 17.5)
+material_override = SubResource("StandardMaterial3D_od5an")
+mesh = SubResource("CapsuleMesh_gfrdh")
+skeleton = NodePath("../..")
+
+[node name="Pawn 1" type="MeshInstance3D" parent="WhitePieces"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5, 1, -17.5)
+material_override = SubResource("StandardMaterial3D_od5an")
+mesh = SubResource("CapsuleMesh_gfrdh")
+skeleton = NodePath("../..")
+
+[node name="Pawn 2" type="MeshInstance3D" parent="WhitePieces"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5, 1, -12.5)
+material_override = SubResource("StandardMaterial3D_od5an")
+mesh = SubResource("CapsuleMesh_gfrdh")
+skeleton = NodePath("../..")
+
+[node name="Pawn 3" type="MeshInstance3D" parent="WhitePieces"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5, 1, -7.5)
+material_override = SubResource("StandardMaterial3D_od5an")
+mesh = SubResource("CapsuleMesh_gfrdh")
+skeleton = NodePath("../..")
+
+[node name="Pawn 4" type="MeshInstance3D" parent="WhitePieces"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5, 1, -2.5)
+material_override = SubResource("StandardMaterial3D_od5an")
+mesh = SubResource("CapsuleMesh_gfrdh")
+skeleton = NodePath("../..")
+
+[node name="Pawn 5" type="MeshInstance3D" parent="WhitePieces"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5, 1, 2.5)
+material_override = SubResource("StandardMaterial3D_od5an")
+mesh = SubResource("CapsuleMesh_gfrdh")
+
+[node name="Hitbox" type="MeshInstance3D" parent="WhitePieces/Pawn 5"]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0, -0.95, 0)
+transparency = 1.0
+mesh = SubResource("PlaneMesh_yh1xe")
+
+[node name="Pawn 6" type="MeshInstance3D" parent="WhitePieces"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5, 1, 7.5)
+material_override = SubResource("StandardMaterial3D_od5an")
+mesh = SubResource("CapsuleMesh_gfrdh")
+skeleton = NodePath("../WhiteKing")
+
+[node name="Pawn 7" type="MeshInstance3D" parent="WhitePieces"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5, 1, 12.5)
+material_override = SubResource("StandardMaterial3D_od5an")
+mesh = SubResource("CapsuleMesh_gfrdh")
+skeleton = NodePath("../..")
+
+[node name="Pawn 8" type="MeshInstance3D" parent="WhitePieces"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5, 1, 17.5)
+material_override = SubResource("StandardMaterial3D_od5an")
+mesh = SubResource("CapsuleMesh_gfrdh")
+skeleton = NodePath("../..")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0.939693, -0.34202, 0, 0.34202, 0.939693, 1, 4.10753e-08, -1.49502e-08, -13, 17, 0)
+fov = 90.0
+script = ExtResource("1_jcnew")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 4.37114e-08, -4.37114e-08, 1.91069e-15, 1, 0, -1, 1.91069e-15, 1, 20, 10)
+
+[node name="GroundPlane" type="MeshInstance3D" parent="."]
+transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_l8tqr")
+mesh = SubResource("PlaneMesh_6jrbi")
